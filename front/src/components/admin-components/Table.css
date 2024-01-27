@@ -1,0 +1,84 @@
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.table {
+    display: block;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0px 10px 10px #cac7c7;
+    border-radius: 19px;
+    white-space: nowrap;
+
+    margin:4rem;
+    table-layout: auto;
+    overflow-x: visible;
+    color:#eae5e5;
+    font-weight: 50;
+}
+
+.table thead {
+    background-color: #ccc;
+    color: #222;
+}
+
+.table th,
+.table td {
+    padding: 2rem;
+}
+
+.table td {
+    border-top: 2px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table tbody tr:hover {
+    background-color: #eee;
+    color :#000;
+}
+
+.expand {
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+.label {
+    border-radius: 5px;
+    padding: 0.3rem;
+    color: white;
+}
+
+.label-draft,
+.label-pending{
+    background-color: #777;
+}
+
+.label-live,.label-accepted {
+    background-color: #42a942;
+}
+
+
+.label-error{
+    background-color: #d9534f;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.actions svg {
+    cursor: pointer;
+}
+
+.delete-btn {
+    color: #e10d05;
+}
+
+.accept-button{
+    width: 30px;
+    color: #4caf50;
+}
