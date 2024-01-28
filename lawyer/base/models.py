@@ -53,18 +53,22 @@ class languagesSpoken(models.Model):
 
 
 class Lawyer(models.Model):
-    IDlawyer=models.AutoField(primary_key=True)
+    IDlawyer = models.AutoField(primary_key=True)
     lawyerfrstName = models.CharField(max_length=50)
-    lawyerLstName= models.CharField(max_length=50)
-    lawyerEmail=models.EmailField(unique=False)
-    lawyerPassword=models.CharField(max_length=20)
-    lawyerPhoneNumber=models.CharField(max_length=30)
+    lawyerLstName = models.CharField(max_length=50)
+    lawyerEmail = models.EmailField(unique=False)
+    lawyerPassword = models.CharField(max_length=20)
+    lawyerPhoneNumber = models.CharField(max_length=30)
     bio = models.TextField()
-    locationLatitude= models.FloatField(null=False, blank=False)
-    locationLongitude= models.FloatField(null=False, blank=False)
-    address= models.CharField(max_length=50)
-    etat=models.CharField(max_length=10)
+    locationLatitude = models.FloatField(null=False, blank=False)
+    locationLongitude = models.FloatField(null=False, blank=False)
+    address = models.CharField(max_length=50)
+    etat = models.CharField(max_length=10)
     administrateurFkey = models.ForeignKey(administrateur, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='lawyer_photos/', null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.lawyerfrstName} {self.lawyerLstName}"
 
 class Experience(models.Model):
     IDexperience=models.AutoField(primary_key=True)
